@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100&display=swap');
+
+body {
+    margin: 0;
+    padding : 0;
+    background: none;
+}
+
+header {
+    background-image: url('/src/components/desktop/hero.jpg');
+    background-position: center 40%;
+    padding: 4% 7%;
+    width: 86%;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    min-height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+.header-text {
+    padding: 0 4%;
+    max-width: 31%;
+    margin-left: 13%;
+    margin-top: 5.3rem;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    border: 2px solid white;
+}
+
+.logo {
+    width: 160px;
+    height: 26.66px;
+    padding-bottom: 16vh;
+    padding-top: 5%;
+}
+
+.nav__bar {
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.nav__bar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.nav__bar a.active {
+    background-color: transparent;
+    color: red;
+    float: left;
+}
+
+.nav__bar .icon {
+    display: none;
+}
+
+.bars {
+    height: 2rem;
+    width: 2rem;
+}
+
+.cancel {
+    height: 1rem;
+    width: 1rem;
+}
+
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+}
+
+  .nav_link:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.7s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav_link:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+
+.hero-text {
+    display: block;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bolder;
+    color: white;
+}
+@media screen and (max-width: 1024px) {
+    .nav__bar a:not(:first-child) {
+        display: none;
+    }
+    .nav__bar a.icon {
+        float: right;
+        display: initial;
+        background: transparent;
+    }
+    .hero-text {
+        display: block;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-align: left;
+        font-weight: bolder;
+        color: white;
+    }
+}
+@media screen and (max-width: 1024px) {
+    
+    .nav__bar.responsive {
+        position: absolute;
+        background: black;
+        flex-direction: row;
+        height: -webkit-fill-available;
+        width: 100%;
+        margin-left: -4rem;
+        margin-top: -3rem;
+        padding-right: 3rem;
+    }
+    
+    .nav__bar.responsive .icon {
+        position: absolute;
+        right: 7%;
+        top: 5%;
+    }
+    .nav__bar.responsive a {
+        float: none;
+        display: initial;
+        text-align: center;
+        color: white;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+    }
+}
+@media (min-width:50px) and (max-width:1024px) {
+    .header-text {
+        padding: 0 5%;
+        max-width: 100%;
+        min-width: unset;
+        margin-top: 0.3rem;
+        align-self: flex-start;
+        border: 2px solid white;
+    }
+    .nav_link{
+        vertical-align: middle;
+        text-align: center;
+        left: -6rem;
+    }
+}
+@media (min-width:50px) and (max-width:767px) {
+    .nav__bar.responsive {
+        position: absolute;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        height: -webkit-fill-available;
+        width: 100%;
+        margin-left: -3rem;
+        margin-top: -3rem;
+        padding-right: 3rem;
+    }
+    .logo {
+        width: 160px;
+        height: 26.66px;
+        padding-bottom: 9vh;
+        padding-top: 6%;
+        margin-left: 0rem;
+    }
+    .nav__bar.responsive a {
+        float: none;
+        display: initial;
+        text-align: center;
+        color: white;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+    }
+}
+@media (min-width:350px) and (max-width:1024px) {
+    .header-text {
+        padding: 0 5%;
+        max-width: 100%;
+        min-width: unset;
+        margin-top: 0.3rem;
+        align-self: flex-start;
+        border: 2px solid white;
+    }
+    .nav_link{
+        vertical-align: middle;
+        text-align: center;
+        left: -6rem;
+    }
+}
+@media (min-width:50px) and (max-width:350px) {
+    
+    .nav__bar.responsive {
+        position: absolute;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        height: -webkit-fill-available;
+        width: 100%;
+        margin-left: -2rem;
+        margin-top: -3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .logo {
+        width: 160px;
+        height: 26.66px;
+        padding-bottom: 4vh;
+        padding-top: 12%;
+        margin-left: 2rem;
+    }
+    .nav__bar.responsive a {
+        float: none;
+        display: initial;
+        text-align: center;
+        color: white;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+    }
+}
